@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektrotechnik Grundlagen - Interaktive Lernplattform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h2>Elektrotechnik Grundlagen</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#concepts" class="nav-link">Konzepte</a>
+                <a href="#circuit-states" class="nav-link">Schaltungszustände</a>
+                <a href="#calculator" class="nav-link">Rechner</a>
+                <a href="#quiz" class="nav-link">Quiz</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Elektrotechnik Grundlagen</h1>
+                <p class="hero-subtitle">Kapitel 4.2: Grundgrößen der Elektrotechnik</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('study-guide')">Lernführer</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('calculator')">Rechner</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Study Guide Section -->
+        <section id="study-guide" class="content-section">
+            <div class="container">
+                <div class="grid-layout">
+                    <div class="card study-guide-card">
+                        <div class="card-header">
+                            <h2 class="section-title">LERNFÜHRER</h2>
+                        </div>
+                        
+                        <div class="subsection">
+                            <h3 class="subsection-title">THEMENÜBERSICHT</h3>
+                            <p class="content-text">
+                                Dieses Kapitel behandelt die fundamentalen Größen der Elektrotechnik: 
+                                Ladung, Potential, Spannung, Stromstärke und Widerstand. Alle Konzepte 
+                                werden durch praktische Beispiele verdeutlicht.
+                            </p>
+                        </div>
+
+                        <div class="subsection">
+                            <h3 class="subsection-title">SCHLÜSSELKONZEPTE</h3>
+                            <ul class="concept-list">
+                                <li>Elektrische Ladung und Elementarladung</li>
+                                <li>Wechselwirkung zwischen Ladungen</li>
+                                <li>Elektrisches Potential und Spannung</li>
+                                <li>Stromstärke und Stromrichtung</li>
+                            </ul>
+                        </div>
+
+                        <div class="formula-highlight">
+                            <div class="formula-icon">💡</div>
+                            <div class="formula-content">
+                                <div class="formula-main">Q = n × e</div>
+                                <div class="formula-desc">Grundformel der elektrischen Ladung</div>
+                            </div>
+                        </div>
+
+                        <div class="tip-box">
+                            <div class="tip-icon">⭐</div>
+                            <div class="tip-content">
+                                <h4>Tipp</h4>
+                                <p>Achten Sie auf die Vorzeichen bei Ladungen. Positive und negative 
+                                Ladungen verhalten sich grundlegend unterschiedlich.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card concept-card">
+                        <div class="card-header">
+                            <h2 class="section-title">KONZEPT ERKLÄRT</h2>
+                        </div>
+
+                        <div class="subsection">
+                            <h3 class="subsection-title">PROZESS</h3>
+                            <div class="process-flow">
+                                <div class="flow-step">Ladungsträger</div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-step">Potential</div>
+                                <div class="flow-down">↓</div>
+                                <div class="flow-step">Spannung</div>
+                                <div class="flow-arrow">→</div>
+                                <div class="flow-step">Stromfluss</div>
+                                <div class="flow-down">↓</div>
+                                <div class="flow-step">Widerstand</div>
+                            </div>
+                        </div>
+
+                        <div class="concept-icons">
+                            <div class="concept-icon">🧠</div>
+                            <div class="concept-icon">💭</div>
+                            <div class="concept-icon">💡</div>
+                        </div>
+
+                        <div class="subsection">
+                            <h3 class="subsection-title">ANWENDUNGEN</h3>
+                            <ul class="application-list">
+                                <li>Berechnung von Stromstärken</li>
+                                <li>Dimensionierung von Schaltungen</li>
+                                <li>Sicherheitsbetrachtungen</li>
+                                <li>Kurzschlussberechnungen</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leerlauf und Kurzschluss Section -->
+        <section id="circuit-states" class="content-section">
+            <div class="container">
+                <h2 class="section-header">Leerlauf und Kurzschluss</h2>
+                <div class="grid-layout">
+                    <div class="card circuit-card">
+                        <div class="card-header">
+                            <h3 class="subsection-title">🔌 LEERLAUF</h3>
+                            <div class="circuit-indicator open-circuit"></div>
+                        </div>
+                        
+                        <div class="circuit-explanation">
+                            <p>Von einem <strong>Leerlauf</strong> spricht man, wenn an den Anschlussklemmen der Spannungsquelle keine Leiter angeschlossen sind.</p>
+                            
+                            <div class="formula-box">
+                                <span class="formula-label">Der Stromkreis ist somit:</span>
+                                <span class="formula-value highlighted">geöffnet</span>
+                            </div>
+                            
+                            <div class="formula-box">
+                                <span class="formula-label">Es wirkt ein:</span>
+                                <span class="formula-value highlighted">unendlich großer</span>
+                                <span class="formula-label">Widerstand.</span>
+                            </div>
+                            
+                            <div class="formula-box">
+                                <span class="formula-label">Die Spannung:</span>
+                                <span class="formula-value highlighted">liegt voll an</span>
+                                <span class="formula-label">, der Strom:</span>
+                                <span class="formula-value highlighted">fließt nicht</span>
+                            </div>
+                        </div>
+                        
+                        <div class="safety-warning">
+                            <div class="warning-icon">⚠️</div>
+                            <div class="warning-text">
+                                <strong>Vorsicht:</strong> Beim Berühren der Anschlussklemmen wird der Stromkreis über den Menschen geschlossen und es können gefährliche Körperströme auftreten.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card circuit-card">
+                        <div class="card-header">
+                            <h3 class="subsection-title">⚡ KURZSCHLUSS</h3>
+                            <div class="circuit-indicator short-circuit"></div>
+                        </div>
+                        
+                        <div class="circuit-explanation">
+                            <p>Von einem <strong>Kurzschluss</strong> spricht man, wenn die Anschlussklemmen der Spannungsquelle direkt miteinander verbunden sind.</p>
+                            
+                            <div class="formula-box">
+                                <span class="formula-label">Es wirkt:</span>
+                                <span class="formula-value highlighted">kein</span>
+                                <span class="formula-label">Widerstand.</span>
+                            </div>
+                            
+                            <div class="formula-box">
+                                <span class="formula-label">Die Spannung:</span>
+                                <span class="formula-value highlighted">bricht ein</span>
+                                <span class="formula-label">und der Strom:</span>
+                                <span class="formula-value highlighted">steigt enorm an</span>
+                            </div>
+                        </div>
+                        
+                        <div class="danger-warning">
+                            <div class="warning-icon">🔥</div>
+                            <div class="warning-text">
+                                <strong>Vorsicht:</strong> Der elektrische Kurzschluss sorgt für sehr hohe Ströme, welche zur Beschädigung von Betriebsmitteln führen!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Interactive Circuit Simulator -->
+                <div class="circuit-simulator">
+                    <h3>Interaktive Schaltungssimulation</h3>
+                    <div class="simulator-container">
+                        <div class="circuit-display">
+                            <div class="voltage-source">
+                                <span class="source-label">Spannungsquelle</span>
+                                <span class="voltage-value" id="source-voltage">12V</span>
+                            </div>
+                            <div class="circuit-path" id="circuit-path">
+                                <div class="wire-segment"></div>
+                                <div class="connection-point" id="connection-point">
+                                    <span class="connection-status" id="connection-status">Offen</span>
+                                </div>
+                                <div class="wire-segment"></div>
+                            </div>
+                            <div class="measurement-display">
+                                <div class="meter">
+                                    <span class="meter-label">Spannung:</span>
+                                    <span class="meter-value" id="measured-voltage">12.0V</span>
+                                </div>
+                                <div class="meter">
+                                    <span class="meter-label">Strom:</span>
+                                    <span class="meter-value" id="measured-current">0.0A</span>
+                                </div>
+                                <div class="meter">
+                                    <span class="meter-label">Widerstand:</span>
+                                    <span class="meter-value" id="measured-resistance">∞ Ω</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="simulator-controls">
+                            <button class="btn btn-primary" onclick="simulateOpenCircuit()">Leerlauf simulieren</button>
+                            <button class="btn btn-danger" onclick="simulateShortCircuit()">Kurzschluss simulieren</button>
+                            <button class="btn btn-secondary" onclick="simulateNormalOperation()">Normalbetrieb (100Ω)</button>
+                            <button class="btn btn-clear" onclick="resetSimulation()">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Notes Section -->
+        <section id="notes" class="content-section bg-light">
+            <div class="container">
+                <div class="grid-layout">
+                    <div class="card notes-card">
+                        <div class="card-header">
+                            <h2 class="section-title italic">Notizen</h2>
+                        </div>
+
+                        <div class="subsection">
+                            <h3 class="subsection-title">THEMA</h3>
+                            <div class="topic-box">
+                                <div class="topic-content">
+                                    <p><strong>Elektrische Ladung:</strong> Proton = +1,602×10⁻¹⁹ C, 
+                                    Elektron = -1,602×10⁻¹⁹ C. Gleiche Ladungen stoßen sich ab, 
+                                    verschiedene ziehen sich an.</p>
+                                </div>
+                                <div class="topic-icon">📖</div>
+                            </div>
+                        </div>
+
+                        <div class="subsection">
+                            <h3 class="subsection-title">WICHTIGE INFOS</h3>
+                            <div class="info-box">
+                                <p><strong>Spannung als Potentialdifferenz:</strong> U = φ₁ - φ₂</p>
+                                <p><strong>Stromstärke:</strong> I = Q/t [A]</p>
+                                <p><strong>Ohm'sches Gesetz:</strong> U = R × I</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card learning-card">
+                        <div class="card-header">
+                            <h2 class="section-title">LERNHILFE</h2>
+                        </div>
+
+                        <div class="subsection">
+                            <h3 class="subsection-title">STRUKTUR</h3>
+                            <ul class="structure-list">
+                                <li>Systematischer Aufbau der Grundlagen</li>
+                                <li>Praktische Rechenbeispiele</li>
+                            </ul>
+                            
+                            <div class="structure-diagram">
+                                <div class="diagram-node filled"></div>
+                                <div class="diagram-line"></div>
+                                <div class="diagram-node"></div>
+                                <div class="diagram-node"></div>
+                            </div>
+                        </div>
+
+                        <div class="key-takeaway">
+                            <h4>Wichtigste Erkenntnis</h4>
+                            <p>Das Ohm'sche Gesetz bildet das Fundament aller elektrischen 
+                            Berechnungen. Sicherheitsaspekte sind bei praktischen Anwendungen essentiell.</p>
+                        </div>
+
+                        <div class="summary-box">
+                            <h4>Zusammenfassung</h4>
+                            <p>Elektrische Phänomene folgen klaren physikalischen Gesetzen. 
+                            Die Beziehung zwischen Spannung, Strom und Widerstand ist fundamental.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Calculator Section -->
+        <section id="calculator" class="content-section">
+            <div class="container">
+                <h2 class="section-header">Elektrische Berechnungen</h2>
+                
+                <!-- Calculator Tabs -->
+                <div class="calculator-tabs">
+                    <button class="tab-button active" onclick="switchTab('ohm-tab', this)">Ohm'sches Gesetz</button>
+                    <button class="tab-button" onclick="switchTab('conductance-tab', this)">Leitwert (G = 1/R)</button>
+                    <button class="tab-button" onclick="switchTab('power-tab', this)">Leistungsberechnung</button>
+                </div>
+                
+                <div class="calculator-grid">
+                    <!-- Ohm's Law Calculator -->
+                    <div class="tab-content active" id="ohm-tab">
+                        <div class="card calculator-card">
+                            <div class="calculator-header">
+                                <h3>Ohm'sches Gesetz</h3>
+                                <div class="formula-display">U = R × I</div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="voltage">Spannung (U) [V]</label>
+                                <input type="number" id="voltage" placeholder="Spannung eingeben" step="any">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="current">Stromstärke (I) [A]</label>
+                                <input type="number" id="current" placeholder="Stromstärke eingeben" step="any">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="resistance">Widerstand (R) [Ω]</label>
+                                <input type="number" id="resistance" placeholder="Widerstand eingeben" step="any">
+                            </div>
+                            
+                            <div class="calculator-buttons">
+                                <button class="btn btn-calculate" onclick="calculateOhm()">Berechnen</button>
+                                <button class="btn btn-clear" onclick="clearCalculator()">Zurücksetzen</button>
+                            </div>
+                            
+                            <div class="result-display" id="result-display">
+                                <div class="result-text">Ergebnis wird hier angezeigt</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Conductance Calculator -->
+                    <div class="tab-content" id="conductance-tab">
+                        <div class="card calculator-card">
+                            <div class="calculator-header">
+                                <h3>Leitwert & Widerstand</h3>
+                                <div class="formula-display">G = 1/R | R = 1/G</div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="resistance-g">Widerstand (R) [Ω]</label>
+                                <input type="number" id="resistance-g" placeholder="Widerstand eingeben" step="any" oninput="calculateConductanceFromR()">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="conductance">Leitwert (G) [S]</label>
+                                <input type="number" id="conductance" placeholder="Leitwert eingeben" step="any" oninput="calculateResistanceFromG()">
+                            </div>
+                            
+                            <div class="formula-explanation">
+                                <h4>Was ist der Leitwert?</h4>
+                                <p>Der Leitwert G ist der Kehrwert des Widerstands R. Je größer der Leitwert, desto besser kann der Strom fließen.</p>
+                                <div class="formula-showcase">
+                                    <div class="formula-item">
+                                        <span class="formula">G = 1/R</span>
+                                        <span class="unit">[Siemens]</span>
+                                    </div>
+                                    <div class="formula-item">
+                                        <span class="formula">R = 1/G</span>
+                                        <span class="unit">[Ohm]</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="conductance-examples">
+                                <h4>Praktische Beispiele</h4>
+                                <div class="example-grid">
+                                    <div class="example-item" onclick="setExampleValues(100, 0.01)">
+                                        <span class="example-label">Niedrig leitfähig</span>
+                                        <span class="example-values">R: 100Ω | G: 0.01S</span>
+                                    </div>
+                                    <div class="example-item" onclick="setExampleValues(10, 0.1)">
+                                        <span class="example-label">Mittel leitfähig</span>
+                                        <span class="example-values">R: 10Ω | G: 0.1S</span>
+                                    </div>
+                                    <div class="example-item" onclick="setExampleValues(1, 1)">
+                                        <span class="example-label">Hoch leitfähig</span>
+                                        <span class="example-values">R: 1Ω | G: 1S</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="result-display" id="conductance-result-display">
+                                <div class="result-text">Geben Sie einen Wert ein, um die Berechnung zu starten</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Power Calculator -->
+                    <div class="tab-content" id="power-tab">
+                        <div class="card calculator-card">
+                            <div class="calculator-header">
+                                <h3>Elektrische Leistung</h3>
+                                <div class="formula-display">P = U × I = R × I² = U²/R</div>
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="power-voltage">Spannung (U) [V]</label>
+                                <input type="number" id="power-voltage" placeholder="Spannung eingeben" step="any">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="power-current">Stromstärke (I) [A]</label>
+                                <input type="number" id="power-current" placeholder="Stromstärke eingeben" step="any">
+                            </div>
+                            
+                            <div class="input-group">
+                                <label for="power-resistance">Widerstand (R) [Ω]</label>
+                                <input type="number" id="power-resistance" placeholder="Widerstand eingeben" step="any">
+                            </div>
+                            
+                            <div class="calculator-buttons">
+                                <button class="btn btn-calculate" onclick="calculatePower()">Leistung berechnen</button>
+                                <button class="btn btn-clear" onclick="clearPowerCalculator()">Zurücksetzen</button>
+                            </div>
+                            
+                            <div class="result-display" id="power-result-display">
+                                <div class="result-text">Ergebnis wird hier angezeigt</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card measurement-card">
+                        <h3>Ihre Messungen</h3>
+                        <div class="measurement-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>U [V]</th>
+                                        <th>1</th>
+                                        <th>2</th>
+                                        <th>5</th>
+                                        <th>7</th>
+                                        <th>10</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>I [A]</strong></td>
+                                        <td>0,25</td>
+                                        <td>0,5</td>
+                                        <td>1,25</td>
+                                        <td>1,75</td>
+                                        <td>2,5</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <!-- Interactive Chart -->
+                        <div class="chart-container">
+                            <h4>UI-Kennlinie (Interaktiv)</h4>
+                            <canvas id="ohmsChart" width="400" height="300"></canvas>
+                        </div>
+                        
+                        <div class="measurement-result">
+                            <p><strong>Erkenntniss:</strong> R = 4Ω (konstant)</p>
+                            <button class="btn btn-secondary" onclick="animateChart()">Animation starten</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="content-section bg-light">
+            <div class="container">
+                <h2 class="section-header">Wissenstest</h2>
+                <div class="quiz-container">
+                    <div class="card quiz-card">
+                        <div class="quiz-header">
+                            <h3>Frage <span id="question-number">1</span> von 5</h3>
+                            <div class="quiz-progress">
+                                <div class="progress-bar" id="progress-bar"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="quiz-question" id="quiz-question">
+                            Was ist die Einheit der elektrischen Ladung?
+                        </div>
+                        
+                        <div class="quiz-options" id="quiz-options">
+                            <button class="quiz-option" onclick="selectAnswer(0)">Volt (V)</button>
+                            <button class="quiz-option" onclick="selectAnswer(1)">Coulomb (C)</button>
+                            <button class="quiz-option" onclick="selectAnswer(2)">Ampere (A)</button>
+                            <button class="quiz-option" onclick="selectAnswer(3)">Ohm (Ω)</button>
+                        </div>
+                        
+                        <div class="quiz-controls">
+                            <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" disabled>Nächste Frage</button>
+                            <button class="btn btn-secondary" onclick="restartQuiz()">Neustart</button>
+                        </div>
+                        
+                        <div class="quiz-result" id="quiz-result" style="display: none;">
+                            <h3>Quiz beendet!</h3>
+                            <p>Ihre Punktzahl: <span id="final-score">0</span> von 5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Elektrotechnik Grundlagen. Erstellt für Kapitel 4.2</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
